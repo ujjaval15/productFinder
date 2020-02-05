@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import Container from '@material-ui/core/Container';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import IconButton from '@material-ui/core/IconButton';
