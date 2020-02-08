@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import { Link } from 'react-scroll';
 
 import getProducts from './getProducts';
 
@@ -30,40 +29,52 @@ const useStyles = makeStyles(theme => ({
     }
   }));
 
-const ScrollToProduct = ({backToTopIcon}) => {
+const ScrollToProduct = ({scrollPosition, handleScroll, handleBackToTopIcon}) => {
     const classes = useStyles();
     const alphabets = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z","#"];
     const products = getProducts();
+    const productRef = useRef([]);
+    const containerElementRef = useRef()
 
-    const handleSetActive = () => {
-        backToTopIcon();
+    const handleScrollTo = (event) => {
+        const targetId = event.currentTarget.id.split('-')[0];
+        const element = productRef.current.find((currentElement) => currentElement.id === targetId);
+        element.scrollIntoView();
+        handleBackToTopIcon();
     }
+
+    const AddToProductRef = (el) => {
+        if (el && !productRef.current.includes(el)) {
+            productRef.current.push(el);
+        }
+    }
+
+    useEffect(() => {
+        if(!scrollPosition) {
+            containerElementRef.current.scrollTop = 0;
+        }
+    }, [scrollPosition]);
+
+    const handleScrollToShowButton = () => {
+        handleScroll(containerElementRef.current.scrollTop);
+    }
+
 
     return (
         <div>
             <div>
                 {alphabets.map((alphabet, id) => {
                     return (
-                        <Button className={classes.alphabet} disabled={!products[alphabet]}  key={`${alphabet}-${id}`} color="primary">
-                            <Link activeClass="active" 
-                                to= {`${alphabet}`}
-                                spy={true} 
-                                smooth={true} 
-                                offset={0} 
-                                duration={0} 
-                                containerId="containerElement"
-                                onSetActive={handleSetActive}
-                                >
-                                {alphabet}
-                            </Link>
+                        <Button onClick={handleScrollTo} className={classes.alphabet} disabled={!products[alphabet]} id={`${alphabet}-${id}`} key={`${alphabet}-${id}`} color="primary">
+                            {alphabet}
                         </Button> 
                     );
                 })}
             </div>
-            <div className={classes.root} id="containerElement">
+            <div ref={containerElementRef} className={classes.root} onScroll={handleScrollToShowButton} id="containerElement">
                 {Object.keys(products).map( (alphabet, id) => (
                     <React.Fragment key={id}>
-                        <div className={classes.listSectionHeader} key={`${alphabet}-${id}`} name={`${alphabet}`} > {alphabet} </div>
+                        <div ref={AddToProductRef} className={classes.listSectionHeader} id={`${alphabet}`} key={`${alphabet}-${id}`} name={`${alphabet}`} > {alphabet} </div>
                         <Divider />
                         {products[alphabet].map( (product, id) => (
                             <ListItem key={`item-${id}-${product}`}>
