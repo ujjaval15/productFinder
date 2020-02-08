@@ -1,139 +1,34 @@
 {
-    "alphabetsWordsList": [
-        {
-            "alphabet": "A",
-            "words": ["anesthesiologist", "antihypertensive", "aminotransferase", "arteriosclerosis", "anthropomorphism", "accommodationist", "archconservative"],
-            "id": 1
-        },
-        {
-            "alphabet": "B",
-            "words": ["bacteriologically", "bacteriologically", "bacteriologically", "blameworthinesses", "blasphemousnesses", "bloodguiltinesses", "biotechnologists"],
-            "id": 2
-        },
-        {
-            "alphabet": "C",
-            "words": ["chromatographically", "cinematographically", "conceptualistically", "contemporaneousness", "counterculturalisms", "crosslinguistically", "cytophotometrically"],
-            "id": 3
-        },
-        {
-            "alphabet": "D",
-            "words": ["diastereoisomerisms", "disadvantageousness", "diastereoisomerism", "defenselessnesses", "deleteriousnesses", "descriptivenesses", "destructivenesses"],
-            "id": 4
-        },
-        {
-            "alphabet": "E",
-            "words": ["electromagnetically", "electrophoretically", "entrepreneurialisms", "exhibitionistically", "expressionistically", "extralinguistically", "entrepreneurialism"],
-            "id": 5
-        },
-        {
-            "alphabet": "F",
-            "words": ["anesthesiologist", "antihypertensive", "aminotransferase", "arteriosclerosis", "anthropomorphism", "accommodationist", "archconservative"],
-            "id": 6
-        },
-        {
-            "alphabet": "G",
-            "words": ["bacteriologically", "bacteriologically", "bacteriologically", "blameworthinesses", "blasphemousnesses", "bloodguiltinesses", "biotechnologists"],
-            "id": 7
-        },
-        {
-            "alphabet": "H",
-            "words": ["chromatographically", "cinematographically", "conceptualistically", "contemporaneousness", "counterculturalisms", "crosslinguistically", "cytophotometrically"],
-            "id": 8
-        },
-        {
-            "alphabet": "I",
-            "words": ["diastereoisomerisms", "disadvantageousness", "diastereoisomerism", "defenselessnesses", "deleteriousnesses", "descriptivenesses", "destructivenesses"],
-            "id": 9
-        },
-        {
-            "alphabet": "J",
-            "words": ["electromagnetically", "electrophoretically", "entrepreneurialisms", "exhibitionistically", "expressionistically", "extralinguistically", "entrepreneurialism"],
-            "id": 10
-        },
-        {
-            "alphabet": "K",
-            "words": ["anesthesiologist", "antihypertensive", "aminotransferase", "arteriosclerosis", "anthropomorphism", "accommodationist", "archconservative"],
-            "id": 11
-        },
-        {
-            "alphabet": "L",
-            "words": ["bacteriologically", "bacteriologically", "bacteriologically", "blameworthinesses", "blasphemousnesses", "bloodguiltinesses", "biotechnologists"],
-            "id": 12
-        },
-        {
-            "alphabet": "M",
-            "words": ["chromatographically", "cinematographically", "conceptualistically", "contemporaneousness", "counterculturalisms", "crosslinguistically", "cytophotometrically"],
-            "id": 13
-        },
-        {
-            "alphabet": "N",
-            "words": ["diastereoisomerisms", "disadvantageousness", "diastereoisomerism", "defenselessnesses", "deleteriousnesses", "descriptivenesses", "destructivenesses"],
-            "id": 14
-        },
-        {
-            "alphabet": "O",
-            "words": ["electromagnetically", "electrophoretically", "entrepreneurialisms", "exhibitionistically", "expressionistically", "extralinguistically", "entrepreneurialism"],
-            "id": 15
-        },
-        {
-            "alphabet": "P",
-            "words": ["anesthesiologist", "antihypertensive", "aminotransferase", "arteriosclerosis", "anthropomorphism", "accommodationist", "archconservative"],
-            "id": 16
-        },
-        {
-            "alphabet": "Q",
-            "words": ["bacteriologically", "bacteriologically", "bacteriologically", "blameworthinesses", "blasphemousnesses", "bloodguiltinesses", "biotechnologists"],
-            "id": 17
-        },
-        {
-            "alphabet": "R",
-            "words": ["chromatographically", "cinematographically", "conceptualistically", "contemporaneousness", "counterculturalisms", "crosslinguistically", "cytophotometrically"],
-            "id": 18
-        },
-        {
-            "alphabet": "S",
-            "words": ["diastereoisomerisms", "disadvantageousness", "diastereoisomerism", "defenselessnesses", "deleteriousnesses", "descriptivenesses", "destructivenesses"],
-            "id": 19
-        },
-        {
-            "alphabet": "T",
-            "words": ["electromagnetically", "electrophoretically", "entrepreneurialisms", "exhibitionistically", "expressionistically", "extralinguistically", "entrepreneurialism"],
-            "id": 20
-        },
-        {
-            "alphabet": "U",
-            "words": ["anesthesiologist", "antihypertensive", "aminotransferase", "arteriosclerosis", "anthropomorphism", "accommodationist", "archconservative"],
-            "id": 21
-        },
-        {
-            "alphabet": "V",
-            "words": ["bacteriologically", "bacteriologically", "bacteriologically", "blameworthinesses", "blasphemousnesses", "bloodguiltinesses", "biotechnologists"],
-            "id": 22
-        },
-        {
-            "alphabet": "W",
-            "words": ["chromatographically", "cinematographically", "conceptualistically", "contemporaneousness", "counterculturalisms", "crosslinguistically", "cytophotometrically"],
-            "id": 23
-        },
-        {
-            "alphabet": "X",
-            "words": ["diastereoisomerisms", "disadvantageousness", "diastereoisomerism", "defenselessnesses", "deleteriousnesses", "descriptivenesses", "destructivenesses"],
-            "id": 24
-        },
-        {
-            "alphabet": "Y",
-            "words": ["electromagnetically", "electrophoretically", "entrepreneurialisms", "exhibitionistically", "expressionistically", "extralinguistically", "entrepreneurialism"],
-            "id": 25
-        },
-        {
-            "alphabet": "Z",
-            "words": ["diastereoisomerisms", "disadvantageousness", "diastereoisomerism", "defenselessnesses", "deleteriousnesses", "descriptivenesses", "destructivenesses"],
-            "id": 26
-        },
-        {
-            "alphabet": "#",
-            "words": [],
-            "id": 27
-        }
+    "alphabetsWordsList": [ "Abby Z.",
+                            "Abercrombie & Fitch",
+                            "Acapulco Gold (clothing brand)",
+                            "Acorn Stores",
+                            "Advisory Board Crystals",
+                            "Aéropostale (clothing)",
+                            "Baby Gap",
+                            "Baby Phat",
+                            "Baci Lingerie",
+                            "Banana Republic",
+                            "Ben Davis (clothing)",
+                            "Callaway Golf Company",
+                            "Calvin Klein (company)",
+                            "Carlos Campos (clothing brand)",
+                            "Capezio",
+                            "Carhartt",
+                            "Carlisle Collection",
+                            "DCMA Collective",
+                            "Delia's",
+                            "Discovery Expedition (clothing)",
+                            "DKNY",
+                            "DL1961",
+                            "Dockers (brand)",
+                            "E. Y. Wada",
+                            "Eckhaus Latta",
+                            "Ecko Unltd",
+                            "Eddie Bauer",
+                            "Edun Live on Campus",
+                            "Eggie (brand)"
+
+        
     ]
-  }
+}

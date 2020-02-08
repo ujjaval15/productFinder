@@ -2,18 +2,25 @@ import { useState, useEffect} from 'react';
 import axios from 'axios';
 
 export default () => {
-    const [products, setProducts] = useState([]);
+    const [products, setProducts] = useState({});
 
     const fetchProductsList = async () => {
+        let obj = {};
         const res = await axios.get('http://localhost:4200/alphabetsWordsList');
-        // console.log(res.data);
-        setProducts(res.data);
+        res.data.forEach(product => {
+            if(obj[product.slice(0, 1)]) {
+                obj[product.slice(0, 1)].push(product);
+            } else {
+                obj[product.slice(0, 1)] = [product]
+            }
+        });  
+    
+        // console.log("productsfilter = " +  obj);
+        setProducts(obj);
     }
 
-    // const alphabets = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z","#"];
     useEffect(() => {
         fetchProductsList();
     }, []);
-    // console.log(alphabetsWords);
     return products;
 }

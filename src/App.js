@@ -3,9 +3,11 @@ import Container from '@material-ui/core/Container';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
+import { animateScroll as scroll } from 'react-scroll';
 
-import Alphabets from './components/Alphabets';
-import ProductsList from './components/ProductsList';
+
+
+import ScrollToProduct from './components/ScrollToProduct';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -17,22 +19,20 @@ const useStyles = makeStyles(theme => ({
 
 const  App = () => {
     const classes = useStyles();
-    const [scrollPosition, setScrollPosition] = useState('');
     const [showBackToTopIcon, setBackToTopIcon] = useState(false);
 
-    const handleAlphabetClick = (id) => {
-        setScrollPosition(id);
-        setBackToTopIcon(true);
-    }
-    const handleBackToTop = () => {
-        setScrollPosition(1);
+    
+    const scrollToTop = () => {
+        scroll.scrollToTop();
         setBackToTopIcon(false);
+    }
+    const backToTopIcon = () => {
+        setBackToTopIcon(true);
     }
     return (
         <Container  maxWidth="sm">
-            <Alphabets handleAlphabetClick = {handleAlphabetClick}/> 
-            <ProductsList scrollPosition={scrollPosition}/>
-            {showBackToTopIcon && <IconButton onClick={handleBackToTop} className={classes.root} color="primary">
+            <ScrollToProduct backToTopIcon={backToTopIcon}/>
+            {showBackToTopIcon && <IconButton onClick={scrollToTop} className={classes.root} color="primary">
                 <ArrowUpwardIcon />
              </IconButton> }
         </Container>
